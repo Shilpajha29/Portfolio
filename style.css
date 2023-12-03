@@ -15,7 +15,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-    /* overflow-x: hidden; */
 }
   body{
     background-color: var(--dark);
@@ -155,25 +154,24 @@ button{
     border-radius: 8px;
     position: relative;
     height: 100%;
-    width:100%;
     align-items: center;
 }
 .website:hover{
-    box-shadow: 0px 0px 15px -2px var(--accent) ;
-    background-color: var(--shade);
+    box-shadow: 0px 0px 15px -1px var(--shade) ;
 }
 .website .heading{
     color: var(--light);
     text-align: center;
     font-size: 30px;
     font-family: 'Rubik', sans-serif;
-    padding: 20px 0 10px;
+    padding: 20px 0;
 }
 .website p{
-    margin:15px 50px 5px ;
+    margin:0px 50px ;
 }
 .demo{
     text-decoration: underline;
+    padding: 10px 0;
     color: var(--lightshade);
 }
 .website-img{
@@ -184,11 +182,11 @@ button{
     padding: 18px 25px;
     border: none;
     border-radius: 10px;
-    border: 1px solid var(--accent);
+    border: 1.5px solid var(--shade);
     background-color: inherit;
     font-size: 15px;
     font-family: 'Rubik', sans-serif;
-    margin-bottom: 40px;
+    margin: 30px 0;
     display: flex;
     align-items:center;
     justify-content:space-around;
@@ -200,15 +198,14 @@ button{
 }
 .output .btn:hover{
     border: 1px solid transparent;
-    box-shadow: 0px 0px 15px -2px var(--accent) ;
+    box-shadow: 0px 0px 15px -2px var(--shade) ;
     color: var(--accent);
-    background-color: var(--dark);
+    background-color: var(--shade);
 }
 
 /* *************************************************************************************************************** */
 #about{
-    padding:50px 10%;
-    padding-left: 2%;
+    padding:50px 10% 50px 0;
 }
 .topic-about{
     margin-left: 60px;
@@ -229,6 +226,7 @@ button{
     top:60px;
     text-align: center;
     z-index:5;
+
 }
 .about-content{
     width: 70vw;
@@ -266,6 +264,10 @@ button{
     line-height: 28px;
     font-weight: 400;
     white-space: wrap;
+    width:100%;
+}
+.para span{
+    color: var(--accent);
 }
 
 /* *************************************************************************************************************** */
@@ -400,6 +402,8 @@ footer{
         align-items: center;
         text-align: justify;
         justify-content: center;
+    }.about-content{
+        width:fit-content;
     }
     .topic-about{
         text-align: center;
@@ -407,7 +411,7 @@ footer{
     .aboutme{
         margin-bottom: 5%;
         position: initial;
-    top:60px;
+        top:60px;
     }
     .contact-bg{
         height: 250px;
@@ -418,6 +422,9 @@ footer{
 }
 
 @media  screen and (max-width: 690px) {
+    .topic{
+        text-align: center;
+    }
     .home-window {
         padding-right: 10%;
     }
@@ -459,7 +466,6 @@ footer{
     }
     #about{
         padding:2%;
-        /* padding-left: 2%; */
     }
    
     .para{
@@ -468,7 +474,7 @@ footer{
         line-height: 20px;
     }
     .topic-about{
-        margin-left: 10%;
+        margin-left: 0;
         text-align: center;
     }
     .shilpa-img{
@@ -478,24 +484,8 @@ footer{
         font-size: 40px;
         color: var(--lightshade);
     }
-    .skill-list{
-        margin-top: 40px;
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 40px;
-    }
     .skill-box{
-        padding: 15px 20px;
         height: 100%;
-        display: flex;
-        align-items: center;
-        border-radius: 8px;
-    }
-    .skill-box:hover{
-        background-color: var(--shade);
-    }
-    .skill-image{
-        line-height: 1.2;
     }
 }
 @media screen and (max-width: 500px) {
@@ -520,6 +510,7 @@ footer{
     .computer{
         display: block;
         width:70%;
+        margin-top: 5%;
     }
     .contact-bg{
         display: none;
@@ -527,6 +518,13 @@ footer{
 } 
 
 @media screen and (max-width: 360px) {
+    .home-window{
+    padding:5% 7%;
+    }
+    .home-window .intro{
+    width: 100%;
+    text-align: justify;
+    }
     .nav-button{
         justify-content:unset;
         padding-left: 40px ;
@@ -543,5 +541,15 @@ footer{
     .intro p {
         font-size: 15px;
         line-height: 25px;
+        padding-top: 10%;
+    }
+    #projects{
+        padding:5% 7%;
+    }
+    .website p{
+        margin: 0 30px;
+    }
+    #about{
+    padding:5% 7%;
     }
 }
