@@ -15,6 +15,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+    /* overflow-x: hidden; */
 }
   body{
     background-color: var(--dark);
@@ -24,7 +25,6 @@
 /* ************************************************************************************************************************************ */
 .nav-button{
     width: 100vw;
-    height: 60px;
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -36,7 +36,6 @@
 }
 .nav-button-container {
     display: flex;
-    height: 100%;
 }
 button{
     cursor: pointer;
@@ -46,6 +45,7 @@ button{
     height: 100%;
     padding: 20px 25px;
     text-decoration: none;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.001);
     transition: background-color 0.3s, border-bottom 0.2s ;
 }
 .button:hover{
@@ -69,6 +69,7 @@ button{
 .home-window .intro {
     display: flex;
     flex-direction: column;
+    width: 80%;
 }
 .intro h1{
     font-size: 70px;
@@ -78,7 +79,6 @@ button{
 .intro h1 span{
     color: var(--accent);
     font-family: 'Rubik', sans-serif;
-
 }
 .intro p {
     font-size: 20px;
@@ -94,14 +94,15 @@ button{
     width:auto;
     height:500px;
 }
-
+.computer{
+    display: none;
+}
 .circle {
     width: 450px;
     height: 450px;
     border-radius: 50%;
     position: absolute;
     right: -130px;
-    /* top: 10px; */
     z-index: -1;
     background-color: var(--shade);
     box-shadow: 0 0 15px 3px var(--accent);
@@ -116,7 +117,6 @@ button{
     background-color: var(--lightshade);
     box-shadow: 0 0 15px 3px var(--shade);
 }
-
 .circle-sm#top {
     left: -60px;
     top: 0px;
@@ -129,9 +129,10 @@ button{
     height:50px;
     width:50px;
 }
+
 /* *************************************************************************************************************** */
 #projects{
-    padding: 60px 10% ;
+    padding: 60px  ;
 }
 .topic{
     font-size: 60px;
@@ -143,6 +144,7 @@ button{
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: center;
+    width:100%;
     gap: 20px;
 }
 .website{
@@ -153,6 +155,7 @@ button{
     border-radius: 8px;
     position: relative;
     height: 100%;
+    width:100%;
     align-items: center;
 }
 .website:hover{
@@ -161,12 +164,10 @@ button{
 }
 .website .heading{
     color: var(--light);
-    /* width: 100%; */
     text-align: center;
     font-size: 30px;
     font-family: 'Rubik', sans-serif;
     padding: 20px 0 10px;
-    /* margin-top:5px; */
 }
 .website p{
     margin:15px 50px 5px ;
@@ -178,8 +179,6 @@ button{
 .website-img{
     width: 250px;
     height: auto;
-    /* border-radius: 8px;
-    border: 5px solid var(--shade); */
 }
 .output .btn{
     padding: 18px 25px;
@@ -194,7 +193,8 @@ button{
     align-items:center;
     justify-content:space-around;
 }
-.btn p{
+.btn a{
+    text-decoration: none;
     margin: 0;
     padding-right:10px;
 }
@@ -204,33 +204,41 @@ button{
     color: var(--accent);
     background-color: var(--dark);
 }
+
 /* *************************************************************************************************************** */
+#about{
+    padding:50px 10%;
+    padding-left: 2%;
+}
+.topic-about{
+    margin-left: 60px;
+}
 .about{
-    padding: 50px 10%;
     display:flex;
     justify-content: center;
-    text-align: justify;
-    margin-bottom: 50px;
+    height: fit-content;
 }
-.about-img{
+.aboutme{
+    width:30vw;
+    height: 100%;
+    margin-left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    margin-right:10%;
-}
-.about-img2{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
     position: sticky;
-    top: 60px;   
+    top:60px;
+    text-align: center;
+    z-index:5;
 }
-.shilpa-img{
-   margin: 30px;   
+.about-content{
+    width: 70vw;
 }
 .bio{
     color: var(--lightshade);
+}
+.shilpa-img{
+    margin: 30px;
+    width:200px;
 }
 .github{
     border: 2px solid var(--accent);
@@ -253,19 +261,13 @@ button{
 }
 .para{
     font-size: 15px;
-    margin: 10% 0;
+    margin-bottom: 50px;
     letter-spacing: 1.5px;
     line-height: 28px;
     font-weight: 400;
     white-space: wrap;
 }
-.aboutthissite{
-    color: var(--lightshade);
-    font-size: 30px;
-}
-li{
-    padding: 10px 0;
-}
+
 /* *************************************************************************************************************** */
 #skill .topic{
     font-size: 40px;
@@ -279,17 +281,20 @@ li{
 }
 .skill-box{
     padding: 15px 20px;
-       display: flex;
-       align-items: center;
-       justify-content:space-betweeen;
-       border-radius: 8px;
+    display: flex;
+    align-items: center;  
+    border-radius: 8px;
 }
 .skill-box:hover{
     background-color: var(--shade);
 }
+.skill-img{
+    height: 50px;
+}
 .tech-lang{
     margin-left: 25px;
 }
+
 /* *************************************************************************************************************** */
 #contact{
     padding: 50px 10%;
@@ -302,7 +307,6 @@ li{
 }
 .contact-bg{
     height:350px;
-    margin-top: -30px;
     margin-right: 50px;
 }
 .ring{
@@ -310,7 +314,6 @@ li{
     right: 140px;
     width:350px;
     z-index:-4;
-
 }
 .help{
     display: flex;
@@ -319,19 +322,15 @@ li{
     gap: 15px;
     margin-top: 30px;
 }
-
-
 .help .email {
     width: fit-content;
     margin-top: 18px;
     padding-bottom: 2px;
     font-size: 22px;
 }
-
 .help .email:hover {
     color: var(--accent);
 }
-
 .submit{
     border: 2px solid var(--accent);
     border-radius: 40px;
@@ -342,33 +341,14 @@ li{
     color: var(--dark);
     font-size: 18px;
 }
-
 .fa-arrow-right {
     font-size: 22px;
     margin-left: 5px;
 }
-.submit:hover{
-    
+.submit:hover{ 
     background-color: var(--accent);
 }
-.bottom-circle{
-    bottom: -1600px;
-    height:200px;
-    width:200px;
-    right: -60px;
-}
-.bottom-left-circle{
-    height:100px;
-    width:100px;
-    bottom: -1950px;
-    left:100px;
-}
-.bottom-top-circle{
-    height:50px;
-    width:50px;
-    bottom: -1550px;
-    left:450px;
-}
+
 /* ****************************************************************** */
 
 hr{
@@ -389,6 +369,7 @@ footer{
     align-items: center;
     justify-content: space-between;
 }
+
 /* ************************************************************************************************************************************ */
 
 @media screen and (max-width: 1270px) {
@@ -401,23 +382,36 @@ footer{
     .intro h1 {
         font-size: 45px;
     }
-
     .intro p {
         font-size: 18px;
     }
-
     .gif {
         height: 300px;
     }
     .project-window {
         grid-template-columns: auto auto;
-        
     }
     .circle{
         width: 350px;
         height: 350px;
     }
-    
+    .about{
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        justify-content: center;
+    }
+    .topic-about{
+        text-align: center;
+    }
+    .aboutme{
+        margin-bottom: 5%;
+        position: initial;
+    top:60px;
+    }
+    .contact-bg{
+        height: 250px;
+    }
     footer{
         font-size:8px;
     }
@@ -437,12 +431,71 @@ footer{
         width: 250px;
         height: 250px;
     }
-    .project-window{
-        
-    grid-template-columns: auto;
+    .project-window{ 
+        grid-template-columns: auto;
     }
-    .contact-bg{
-        height: 200px;
+    .tech-lang{
+        display: none;
+    }
+    .skill-box{
+        justify-content: center;
+    }
+    footer h5{
+        font-size: 10px;
+    }
+    .help .email {
+        font-size: 15px;
+    }
+    .help h1{
+        font-size: 20px;
+    }
+    .submit{
+        padding: 15px 15px;
+        font-weight: 600;
+        font-size: 15px;
+    }
+    .fa-arrow-right {
+       display: none;
+    }
+    #about{
+        padding:2%;
+        /* padding-left: 2%; */
+    }
+   
+    .para{
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        line-height: 20px;
+    }
+    .topic-about{
+        margin-left: 10%;
+        text-align: center;
+    }
+    .shilpa-img{
+        width: 100px;
+    }
+    #skill .topic{
+        font-size: 40px;
+        color: var(--lightshade);
+    }
+    .skill-list{
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 40px;
+    }
+    .skill-box{
+        padding: 15px 20px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+    }
+    .skill-box:hover{
+        background-color: var(--shade);
+    }
+    .skill-image{
+        line-height: 1.2;
     }
 }
 @media screen and (max-width: 500px) {
@@ -453,22 +506,27 @@ footer{
         padding:20px 5px;
     }
     .home-window{
-        /* padding: 0px 40px ; */
-        
-    justify-content:space-evenly;
+        flex-direction: column;
+        height: 100%;
     }
     .intro h1{
         font-size: 50px;
-        margin-bottom: 50px;
+        margin-top: 30% ;
     }
     .intro p {
         font-size: 15px;
         line-height: 25px;
     }
-}
+    .computer{
+        display: block;
+        width:70%;
+    }
+    .contact-bg{
+        display: none;
+    }
+} 
 
 @media screen and (max-width: 360px) {
-
     .nav-button{
         justify-content:unset;
         padding-left: 40px ;
@@ -479,12 +537,8 @@ footer{
     .s-logo{
         width:25px;
     }
-    .home-window{
-        /* padding: 50px 40px ; */
-    }
     .intro h1{
         font-size: 40px;
-        /* margin-bottom: 50px; */
     }
     .intro p {
         font-size: 15px;
