@@ -498,14 +498,23 @@ footer{
     .home-window{
         flex-direction: column;
         height: 100%;
+        padding:5% 7%;
+    }
+    .home-window .intro{
+    width: 100%;
+    text-align: justify;
     }
     .intro h1{
-        font-size: 50px;
+        font-size: 40px;
         margin-top: 30% ;
     }
     .intro p {
         font-size: 15px;
         line-height: 25px;
+        padding-top: 10%;
+    }
+    #about, #projects{
+    padding:5% 7%;
     }
     .computer{
         display: block;
@@ -518,13 +527,6 @@ footer{
 } 
 
 @media screen and (max-width: 360px) {
-    .home-window{
-    padding:5% 7%;
-    }
-    .home-window .intro{
-    width: 100%;
-    text-align: justify;
-    }
     .nav-button{
         justify-content:unset;
         padding-left: 40px ;
@@ -535,21 +537,7 @@ footer{
     .s-logo{
         width:25px;
     }
-    .intro h1{
-        font-size: 40px;
-    }
-    .intro p {
-        font-size: 15px;
-        line-height: 25px;
-        padding-top: 10%;
-    }
-    #projects{
-        padding:5% 7%;
-    }
     .website p{
         margin: 0 30px;
-    }
-    #about{
-    padding:5% 7%;
     }
 }
