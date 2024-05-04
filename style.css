@@ -56,11 +56,11 @@ button{
 }
 
 /* *************************************************************************************************************** */
-.home-window {
+#home {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 10% ;
+    padding-left: 8% ;
     height: 100vh;
     width: 100vw;
 }
@@ -113,7 +113,25 @@ button{
     right: 300px;
     bottom: 40px;
     background-color: var(--lightshade);
-    box-shadow: 0 0 15px 3px var(--shade);
+    /* box-shadow: 0 0 25px 20px var(--shade); */
+    /* animation-name: call; */
+    animation-duration: 4s;
+    animation: call 0.75s linear 0s infinite alternate;
+}
+@keyframes call {
+    /* from {    transform: scale(1.0);
+    }
+    to {    transform: scale(1.5);
+    } */
+
+    from {
+        
+    box-shadow: 0 0 8px 3px var(--shade);
+    }
+    to {
+        box-shadow:0px 0px 18px 2px var(--shade) ;
+    }
+    
 }
 .circle-sm#top {
     left: -60px;
@@ -121,7 +139,7 @@ button{
     width: 150px;
     height: 150px;
 }
-.circle-sm#extra-small{
+.circle-sm #extra-small{
     top: 100px;
     right: 350px;
     height:50px;
@@ -130,23 +148,22 @@ button{
 
 /* *************************************************************************************************************** */
 #projects{
-    padding: 60px  ;
+    padding: 5% 8% 0;
 }
 .topic{
     font-size: 60px;
     font-family: 'Rubik', sans-serif;
     color: var(--accent);
-    padding-bottom: 15px;
 }
 .project-window {
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: center;
     width:100%;
+    padding:5% 0 ;
     gap: 20px;
 }
 .website{
-    text-align: justify;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -154,48 +171,46 @@ button{
     position: relative;
     height: 100%;
     align-items: center;
+    border: 1px solid var(--shade);
+    transition: all 0.3s ease-in-out;
 }
 .website:hover{
-    box-shadow: 0px 0px 15px -1px var(--shade) ;
+    box-shadow: 0px 0px 20px -1px #4aa77c90 ;
+    transform: scale(1.03);
 }
 .website .heading{
     color: var(--light);
-    text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Rubik', sans-serif;
-    padding: 20px 0;
+    padding: 25px;
 }
 .website p{
-    margin:0px 50px ;
-}
-.demo{
-    text-decoration: underline;
-    padding: 10px 0;
-    color: var(--lightshade);
+    padding: 25px;
+    text-align: center;
 }
 .website-img{
-    width: 250px;
+    width: 330px;
     height: auto;
 }
+
+.link-container {
+    display: flex;
+    gap: 15px;
+}
 .output .btn{
-    padding: 18px 25px;
+    padding: 7px 16px;
     border: none;
     border-radius: 10px;
-    border: 1.5px solid var(--shade);
-    background-color: inherit;
-    font-size: 15px;
-    font-family: 'Rubik', sans-serif;
-    margin: 30px 0;
-    display: flex;
-    align-items:center;
-    justify-content:space-around;
-}
-.output .btn:hover{
-    border: 1px solid transparent;
-    border: 1.5px solid var(--shade);
-    box-shadow: 0px 0px 15px -1px var(--shade) ;
-    color: var(--accent);
     background-color: var(--shade);
+    font-size: 15px;
+    margin: 0px 0 50px;
+    transition: all 0.25s ease-in-out;
+
+}
+
+.output .btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transform: scale(1.05);
 }
 .btn a{
     text-decoration: none;
@@ -205,20 +220,16 @@ button{
 
 /* *************************************************************************************************************** */
 #about{
-    padding:50px 10% 50px 0;
-}
-.topic-about{
-    margin-left: 60px;
+    padding: 5% 8% 0;
 }
 .about{
     display:flex;
     justify-content: center;
     height: fit-content;
+    padding: 3% 0;
 }
 .aboutme{
-    width:30vw;
     height: 100%;
-    margin-left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -228,77 +239,105 @@ button{
     z-index:5;
 }
 .about-content{
-    width: 70vw;
+    margin-left: 4rem;
 }
 .bio{
     color: var(--lightshade);
 }
+
+h5.bio {
+    color: var(--light);
+    font-weight: 100;
+    margin-top: 5px;
+}
 .shilpa-img{
-    margin: 30px;
+    margin: 20px 0;
     width:200px;
+    border-radius: 50%;
+    border: var(--accent) solid 3px;
 }
 .github{
-    border: 2px solid var(--accent);
+    /* border: 1px solid #a1a1a1; */
     border-radius: 30px;
     text-decoration: none;
-    background-color: var(--light);
-    margin:20px;
-    padding: 8px 20px;
+    background-color: var(--lightshade);
+    /* background-color: #0f514e; */
+    margin:30px;
+    padding: 15px 35px;
     display:flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center; 
+    transition: all 0.25s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;}
+.hi{
+    /* background-color: inherit; */
+    /* width: 30px; */
+    color: #dcdcdc;
+    color: var(--light);
+    /* font-weight: 500; */
+    /* background-color: #c2cd4b; */
 }
-.github-img, .hi{
-    background-color: inherit;
-    width: 30px;
-    color: var(--dark);
-}
-.github:hover, .hi:hover{
+.github:hover{
     background-color: var(--accent);
 }
 .para{
     font-size: 15px;
-    margin-bottom: 50px;
     letter-spacing: 1.5px;
     line-height: 28px;
     font-weight: 400;
     white-space: wrap;
+    margin-top: 5%;
     width:100%;
 }
-.para span{
+.para span,#experience span{
     color: var(--accent);
 }
-
 /* *************************************************************************************************************** */
-#skill .topic{
+#experience{
+    padding: 2% 0;
+}
+#experience h5{
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-weight: 400;
+    margin: 35px 0;
+}
+#experience p{
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+}
+/* *************************************************************************************************************** */
+.sub-topic, .sub-topic{
     font-size: 40px;
     color: var(--lightshade);
+    margin: 100px 0 30px;
 }
 .skill-list{
-    margin-top: 40px;
     display: grid;
-    grid-template-columns: auto auto;
-    gap: 40px;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 20px;
 }
 .skill-box{
-    padding: 15px 20px;
     display: flex;
-    align-items: center;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--shade);
+}
+.skill-box p{
+    margin: 5px;
 }
 .skill-box:hover{
-    background-color: var(--shade);
-}
-.skill-img{
-    height: 50px;
-}
-.tech-lang{
-    margin-left: 25px;
+    box-shadow: 0px 0px 15px -1px var(--shade) ;
 }
 
 /* *************************************************************************************************************** */
 #contact{
-    padding: 50px 10%;
+    padding: 5% 8% 0;
 }
 .contact-me{
     display: flex;
@@ -307,14 +346,8 @@ button{
     margin-bottom: 30px;
 }
 .contact-bg{
-    height:350px;
+    height:400px;
     margin-right: 50px;
-}
-.ring{
-    position:absolute;
-    right: 140px;
-    width:350px;
-    z-index:-4;
 }
 .help{
     display: flex;
@@ -351,8 +384,15 @@ button{
 }
 
 /* ****************************************************************** */
+.footer{
+    padding: 0;
+    margin: 30px 0;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 hr{
-    width: 90%;
     box-shadow: 0 0 10px 0px var(--accent);
 }
 footer h5{
@@ -360,25 +400,16 @@ footer h5{
     color: var(--shade);
 }
 footer i{
-    padding: 5px;
+    padding: 6px;
 }
-footer{
-    padding: 25px 10%  ;
-    font-size: 12px;
+.icons{
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 /* ************************************************************************************************************************************ */
 
-@media screen and (max-width: 1270px) {
-    .ring{
-       display: none;
-    }    
-}
-
-@media screen and (max-width: 920px){
+@media screen and (max-width: 1000px){
     .intro h1 {
         font-size: 45px;
     }
@@ -419,7 +450,33 @@ footer{
     }
 }
 
-@media  screen and (max-width: 690px) {
+@media screen and (max-width: 590px) {
+    .topic{
+        text-align: center;
+    }
+    footer h5{
+        font-size: 10px;
+    }
+    .help .email,.help h1 {
+        font-size: 15px;
+    }
+    .submit{
+        padding: 15px;
+        font-size: 15px;
+    }
+    .para{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .shilpa-img{
+        width: 100px;
+    }
+    .nav-button{
+        padding: 0 35px ;
+    }
+    .button{
+        padding:20px 5px;
+    }
     .topic{
         text-align: center;
     }
@@ -441,68 +498,23 @@ footer{
         line-height: 25px;
         padding-top: 5%;
     }
+    .gif, .circle-sm, .circle, .tech-lang, .fa-arrow-right {
+        display: none;
+    }
     .computer{
         display: block;
         width:70%;
         margin-top: 0;
     }
-    .gif, .circle-sm, .circle, .tech-lang, .fa-arrow-right {
-        display: none;
-    }
-    .button{
-        padding: 20px 10px;
-    }
-    .circle{
-        width: 250px;
-        height: 250px;
-    }
     #about, #projects{
-        padding:5% 7%;
-        }
+        padding:5% ;
+    }
     .project-window{ 
         grid-template-columns: auto;
     }
-    .skill-box{
-        justify-content: center;
-    }
-    footer h5{
-        font-size: 10px;
-    }
-    .help .email {
-        font-size: 15px;
-    }
-    .help h1{
-        font-size: 20px;
-    }
-    .submit{
-        padding: 15px 15px;
-        font-weight: 600;
-        font-size: 15px;
-    }
-    .para{
-        font-size: 12px;
-        letter-spacing: 1.5px;
-        line-height: 20px;
-    }
-    .topic-about{
-        margin-left: 0;
-    }
-    .shilpa-img{
-        width: 100px;
-    }
-}
-@media screen and (max-width: 500px) {
-    .nav-button{
-        padding: 0 35px ;
-    }
-    .button{
-        padding:20px 5px;
-    }
-    .intro h1{
-        margin-top: 30% ;
-    }
-    .intro p {
-        padding-top: 10%;
+    .skill-list{
+        grid-template-columns: auto auto auto;
+        gap:10px;
     }
     .contact-bg{
         display: none;
