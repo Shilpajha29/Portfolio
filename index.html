@@ -12,315 +12,368 @@
     <link rel="icon" href="letter-s (1).png">
     <title>PortFolio | Shilpa Jha</title>
 </head>
-<nav class="nav-button">
-    <img class="s-logo" src="letter-s (1).png">
-    <div class="nav-button-container">
-        <a class="button" href="#home">Home</a>
-        <a class="button" href="#projects">Project</a>
-        <a class="button" href="#about">About</a>
-        <a class="button" href="#experience">Experience</a>
-        <a class="button" href="#contact">Contact</a>
-    </div>
-</nav>
 
-<div id="home" class="home-window">
-    <div class="circle-sm" id="top"></div>
-    <div class="intro">
-        <h1>Hi, I am <span>Shilpa</span></h1>
-        <p>Welcome to my digital playground! I'm a passionate <span>&nbsp;Front-end Developer, dedicated coder, and a
-                creative mind. </span>&nbsp;Here, I showcase my web adventures and projects.</p>
-    </div>
-    <img class="computer" src="images/Selected_Works-removebg-preview.png" alt="">
-    <img class="gif" src="./images/model3D.gif" alt="">
-    <div class="circle"></div>
-    <div class="circle-sm"></div>
-    <div class="circle-sm" id="extra-small"></div>
-</div>
-<div id="projects" class="page projects-window">
-    <h1 class="topic">Projects</h1>
-    <div class="project-window">
+<body onload="typeWriter()">
+    <nav class="nav-button">
+        <img class="s-logo" src="letter-s (1).png">
+        <div class="nav-button-container">
+            <a class="button" href="#home">Home</a>
+            <a class="button" href="#projects">Project</a>
+            <a class="button" href="#about">About</a>
+            <a class="button" href="#experience">Experience</a>
+            <a class="button" href="#contact">Contact</a>
+        </div>
+    </nav>
 
-        <div class="website">
-            <h1 class="heading">grooveGalaxy</h1>
-            <img src="./images/grooveGalaxy.png" alt="website" class="website-img">
-            <p>My responsive portfolio website, crafted using HTML & CSS, showcases my skills & projects creatively,
-               leaving a lasting impression.</p>
-            <div class="link-container">
-                <!-- <div class="output">
+    <div id="home" class="home-window">
+        <div class="circle-sm" id="top"></div>
+        <div class="intro">
+            <h1>Hi, I am <span>Shilpa</span></h1>
+            <p id="me"></p>
+            <script>
+                var i = 0;
+                var txt = "Welcome to my digital playground! I'm a passionate Front-end Developer, dedicated coder, and a creative mind. Here, I showcase my web adventures and projects.";
+                var speed = 50;
+                function typeWriter() {
+                    if (i < txt.length) {
+                        document.getElementById("me").innerHTML += txt.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    }
+                }
+            </script>
+        </div>
+        <img class="computer" src="images/Selected_Works-removebg-preview.png" alt="">
+        <img class="gif" src="./images/model3D.gif" alt="">
+        <div class="circle"></div>
+        <div class="circle-sm"></div>
+        <div class="circle-sm" id="extra-small"></div>
+    </div>
+
+    <div class="left-sidebar">
+        <a href="https://www.instagram.com/_.shilpajha/"><i class="fa-brands fa-instagram"
+                style="color: #4aa77c;"></i></a>
+        <a href="https://github.com/Shilpajha29"><i class="fa-brands fa-github" style="color: #4aa77c;"></i></a>
+        <a href="https://www.linkedin.com/in/shilpajha29/"><i class="fa-brands fa-linkedin"
+                style="color: #4aa77c;"></i></a>
+        <a href="https://leetcode.com/Shilpajha29/"><img src="./images/leetcode.svg" style="width: 1rem;"></a>
+        <div class="verticle-line"></div>
+    </div>
+
+    <div class="right-sidebar">
+        <a href="mailto:shilpajmd123@gmail.com">shilpajmd123@gmail.com</a>
+        <div class="verticle-line"></div>
+    </div>
+
+    <div id="projects" class="page projects-window">
+        <h1 class="topic">Projects</h1>
+        <div class="project-window">
+
+            <div class="website">
+                <h1 class="heading">grooveGalaxy</h1>
+                <img src="./images/grooveGalaxy.png" alt="website" class="website-img">
+                <p>My responsive portfolio website, crafted using HTML & CSS, showcases my skills & projects creatively,
+                    leaving a lasting impression.</p>
+                <div class="link-container">
+                    <!-- <div class="output">
                     <button class="btn">
                         <a href="https://github.com/Shilpajha29/grooveGalaxy">Demo</a>
                         <i class="fa-solid fa-up-right-from-square"></i>
                     </button>
                 </div> -->
-                <div class="output">
-                    <button class="btn">
-                        <a href="https://github.com/Shilpajha29/grooveGalaxy">View on</a>
-                        <i class="fa-brands fa-github"></i>
-                    </button>
+                    <div class="output">
+                        <button class="btn">
+                            <a href="https://github.com/Shilpajha29/grooveGalaxy">View on</a>
+                            <i class="fa-brands fa-github"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="website">
-            <h1 class="heading">sortingVisualizer</h1>
-            <img src="./images/grooveGalaxy.png" alt="website" class="website-img">
-            <p>My responsive portfolio website, crafted using HTML & CSS, showcases my skills & projects creatively,
-                leaving a lasting impression.</p>
-            <div class="link-container">
-                <div class="output">
-                    <button class="btn">
-                        <a href="https://github.com/Shilpajha29/grooveGalaxy">Demo</a>
-                        <i class="fa-solid fa-up-right-from-square"></i>
-                    </button>
-                </div>
-                <div class="output">
-                    <button class="btn">
-                        <a href="https://github.com/Shilpajha29/grooveGalaxy">View on</a>
-                        <i class="fa-brands fa-github"></i>
-                    </button>
+            <div class="website">
+                <h1 class="heading">sortingVisualizer</h1>
+                <img src="./images/grooveGalaxy.png" alt="website" class="website-img">
+                <p>My responsive portfolio website, crafted using HTML & CSS, showcases my skills & projects creatively,
+                    leaving a lasting impression.</p>
+                <div class="link-container">
+                    <div class="output">
+                        <button class="btn">
+                            <a href="https://github.com/Shilpajha29/grooveGalaxy">Demo</a>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </button>
+                    </div>
+                    <div class="output">
+                        <button class="btn">
+                            <a href="https://github.com/Shilpajha29/grooveGalaxy">View on</a>
+                            <i class="fa-brands fa-github"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="website">
-            <h1 class="heading">currencyConverter</h1>
-            <img src="./images/currencyConverter.png" alt="website" class="website-img">
-            <p>My responsive portfolio website, crafted using HTML & CSS, showcases my skills & projects creatively,
-                leaving a lasting impression.</p>
-            <div class="link-container">
-                <div class="output">
-                    <button class="btn">
-                        <a href="https://shilpajha29.github.io/Currency-Converter/">Demo</a>
-                        <i class="fa-solid fa-up-right-from-square"></i>
-                    </button>
-                </div>
-                <div class="output">
-                    <button class="btn">
-                        <a href="https://github.com/Shilpajha29/Currency-Converter">View on</a>
-                        <i class="fa-brands fa-github"></i>
-                    </button>
+            <div class="website">
+                <h1 class="heading">currencyConverter</h1>
+                <img src="./images/currencyConverter.png" alt="website" class="website-img">
+                <p>My responsive portfolio website, crafted using HTML & CSS, showcases my skills & projects creatively,
+                    leaving a lasting impression.</p>
+                <div class="link-container">
+                    <div class="output">
+                        <button class="btn">
+                            <a href="https://shilpajha29.github.io/Currency-Converter/">Demo</a>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </button>
+                    </div>
+                    <div class="output">
+                        <button class="btn">
+                            <a href="https://github.com/Shilpajha29/Currency-Converter">View on</a>
+                            <i class="fa-brands fa-github"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="website">
-            <h1 class="heading">playSprint</h1>
-            <img src="./images/playSprint.png" alt="website" class="website-img">
-            <p>My responsive portfolio website, crafted using HTML & CSS, showcases my skills & projects creatively,
-                leaving a lasting impression.</p>
-            <div class="link-container">
-                <div class="output">
-                    <button class="btn">
-                        <a href="https://shilpajha29.github.io/playSprint/">Demo</a>
-                        <i class="fa-solid fa-up-right-from-square"></i>
-                    </button>
-                </div>
-                <div class="output">
-                    <button class="btn">
-                        <a href="https://github.com/Shilpajha29/playSprint">View on</a>
-                        <i class="fa-brands fa-github"></i>
-                    </button>
+            <div class="website">
+                <h1 class="heading">playSprint</h1>
+                <img src="./images/playSprint.png" alt="website" class="website-img">
+                <p>My responsive portfolio website, crafted using HTML & CSS, showcases my skills & projects creatively,
+                    leaving a lasting impression.</p>
+                <div class="link-container">
+                    <div class="output">
+                        <button class="btn">
+                            <a href="https://shilpajha29.github.io/playSprint/">Demo</a>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </button>
+                    </div>
+                    <div class="output">
+                        <button class="btn">
+                            <a href="https://github.com/Shilpajha29/playSprint">View on</a>
+                            <i class="fa-brands fa-github"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="website">
-            <h1 class="heading">doggieDate</h1>
-            <img src="./images/doggieDate.png" alt="website" class="website-img">
+            <div class="website">
+                <h1 class="heading">doggieDate</h1>
+                <img src="./images/doggieDate.png" alt="website" class="website-img">
                 <p>It is a specialized dating platform for dogs, built with Bootstrap, where pups can find canine
                     companions, arrange playdates, and build lasting friendships.</p>
-            <div class="link-container">
-                <div class="output">
-                    <button class="btn">
-                        <a href="https://shilpajha29.github.io/doggieDate/">Demo</a>
-                        <i class="fa-solid fa-up-right-from-square"></i>
-                    </button>
-                </div>
-                <div class="output">
-                    <button class="btn">
-                        <a href="https://github.com/Shilpajha29/doggieDate">View on</a>
-                        <i class="fa-brands fa-github"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="website">
-            <h1 class="heading">amazonClone</h1>
-            <img src="./images/AmazonClone.png" alt="website" class="website-img">
-            <p>It is a specialized dating platform for dogs, built with Bootstrap, where pups can find canine
-                companions, arrange playdates, and build lasting friendships.</p>
-                
-            <div class="link-container">
-                <div class="output">
-                    <button class="btn">
-                        <a href="https://shilpajha29.github.io/Amazon-clone/">Demo</a>
-                        <i class="fa-solid fa-up-right-from-square"></i>
-                    </button>
-                </div>
-                <div class="output">
-                    <button class="btn">
-                        <a href="https://github.com/Shilpajha29/Amazon-clone">View on</a>
-                        <i class="fa-brands fa-github"></i>
-                    </button>
+                <div class="link-container">
+                    <div class="output">
+                        <button class="btn">
+                            <a href="https://shilpajha29.github.io/doggieDate/">Demo</a>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </button>
+                    </div>
+                    <div class="output">
+                        <button class="btn">
+                            <a href="https://github.com/Shilpajha29/doggieDate">View on</a>
+                            <i class="fa-brands fa-github"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
 
+            <div class="website">
+                <h1 class="heading">amazonClone</h1>
+                <img src="./images/AmazonClone.png" alt="website" class="website-img">
+                <p>It is a specialized dating platform for dogs, built with Bootstrap, where pups can find canine
+                    companions, arrange playdates, and build lasting friendships.</p>
+
+                <div class="link-container">
+                    <div class="output">
+                        <button class="btn">
+                            <a href="https://shilpajha29.github.io/Amazon-clone/">Demo</a>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </button>
+                    </div>
+                    <div class="output">
+                        <button class="btn">
+                            <a href="https://github.com/Shilpajha29/Amazon-clone">View on</a>
+                            <i class="fa-brands fa-github"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-</div>
 
-<div id="about" class="page">
-    <h1 class="topic">About</h1>
-    <div class="about">
-        <div class="aboutme">
-            <img class="shilpa-img" src="./images/profile-pic.png" alt="shilpa's img">
-            <h3 class="bio">Shilpa Jha</h3>
-            
-            <h5 class="bio">Web Developer
-                <br>
-                Student
-            </h5>
-            <a class="github" href="./images/shilpajha.pdf" download="shilpajha.pdf">
-                <!-- <i class="fa-solid fa-file-lines" style="color:#0b5351; font-size: 1.5rem"></i>
-                <span class="hi">Hi</span> -->
-                <span class="hi">View CV</span>
-            </a>
-        </div>
-        <div class="about-content">
-            <p class="para">
-                I'm <span>Shilpa</span>, a second-year Btech student passionate about <span>coding and web
-                    development</span>. I'm currently honing my
-                skills in HTML, CSS, JavaScript, while also diving into Java and C/C++. I enjoy <span>tackling
-                    challenges</span>,
-                believing that learning from mistakes sets me apart. Oh, by the way, I'm not just a "female programmer."
-                I'm
-                a programmer who happens to be female.
-                <br><br>
-                Beside this, my affection for mic and stage makes me better day by day as it helps in improving my
-                <span>communication skills</span>, boosts my self confidence and accepting new challenges. My technical
-                expertise and
-                co-curricular talents make me stand out, and I'm <span>eager</span> to collaborate on exciting projects.
-                If you're up for
-                it, let's dive in together and make great things happen!!
-            </p>
-            <div id="experience">
-                <h1 class="sub-topic">Experience</h1>
-                <h3>Software Engineer Intern</h3>
-                <h5><span>@ piotech India</span><br>
-                    <i>Frontend Developer</i> <br>
-                    19th December 2023 - 19th March 2024
+    <div id="about" class="page">
+        <h1 class="topic">About</h1>
+        <div class="about">
+            <div class="aboutme">
+                <img class="shilpa-img" src="./images/profile-pic.png" alt="shilpa's img">
+                <h3 class="bio">Shilpa Jha</h3>
+
+                <h5 class="bio">Web Developer
+                    <br>
+                    Student
                 </h5>
-                <p>Developer on Project Healer, where I am responsible for designing, developing, and implementing
-                    solutions with a team of developers.
-                    <br>
-                    <span>→ Designing Plesant UI:</span>
-                    <br>
-                    Developing the User Interface of the project as per the figma design and UI guidelines. Making it
-                    responsive and easily adaptable and customizable.
-                    <br>
-                    <span>→ Technology Used:</span>
-                    <br>
-                    React.js, Typescript, JavaScript, HTML, CSS
-                </p>
-
+                <a class="resume" href="./images/myResume (1).pdf" download="shilpajha.pdf">
+                    <span class="hi">View CV</span>
+                </a>
             </div>
-            <div id="skill">
-                <h1 class="sub-topic">Skills</h1>
-                <div class="skill-list">
-                    <div class="skill-box">
-                        <i class="skill-img fa-3x fa-brands fa-html5" style="color: #ffffff;"></i>
-                        <p>HTML</p>
+            <div class="about-content">
+                <p class="para">
+                    I'm <span>Shilpa</span>, a second-year Btech student passionate about <span>coding and web
+                        development</span>. I'm currently honing my
+                    skills in HTML, CSS, JavaScript, while also diving into Java and C/C++. I enjoy <span>tackling
+                        challenges</span>,
+                    believing that learning from mistakes sets me apart. Oh, by the way, I'm not just a "female
+                    programmer."
+                    I'm
+                    a programmer who happens to be female.
+                    <br><br>
+                    Beside this, my affection for mic and stage makes me better day by day as it helps in improving my
+                    <span>communication skills</span>, boosts my self confidence and accepting new challenges. My
+                    technical
+                    expertise and
+                    co-curricular talents make me stand out, and I'm <span>eager</span> to collaborate on exciting
+                    projects.
+                    If you're up for
+                    it, let's dive in together and make great things happen!!
+                </p>
+                <div id="experience">
+                    <h1 class="sub-topic">Experience</h1>
+                    <h3>Software Engineer Intern</h3>
+                    <h5><span>@ piotech India</span><br>
+                        <i>Frontend Developer</i> <br>
+                        19th December 2023 - 19th March 2024
+                    </h5>
+                    <p>Developer on Project Healer, where I am responsible for designing, developing, and implementing
+                        solutions with a team of developers.
+                        <br>
+                        <span>→ Designing Plesant UI:</span>
+                        <br>
+                        Developing the User Interface of the project as per the figma design and UI guidelines. Making
+                        it
+                        responsive and easily adaptable and customizable.
+                        <br>
+                        <span>→ Technology Used:</span>
+                        <br>
+                        React.js, Typescript, JavaScript, HTML, CSS
+                        <br>
+                        <span>→ Certification of completion:</span>
+                        <br>
+                        <div class="certificates">
+                            <img class="experienceimg" src="./images/experience/Screenshot 2024-04-13 134911.png">
+                            <img class="experienceimg" src="./images/experience/Screenshot 2024-04-13 134744.png">
+                        </div> 
+                    </p>
+
+
+                </div>
+                <div id="skill">
+                    <h1 class="sub-topic">Skills</h1>
+                    <div class="skill-list">
+                        <div class="skill-box">
+                            <i class="skill-img fa-3x fa-brands fa-html5" style="color: #ffffff;"></i>
+                            <p>HTML</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="skill-img fa-3x fa-brands fa-css3-alt" style="color: #ffffff;"></i>
+                            <p>CSS</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="skill-img fa-3x fa-brands fa-bootstrap" style="color: #ffffff;"></i>
+                            <p>Bootstrap</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="skill-img fa-3x fa-brands fa-square-js" style="color: #ffffff;"></i>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="skill-img fa-3x fa-brands fa-react" style="color: #ffffff;"></i>
+                            <p>React.js</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="skill-img fa-3x fa-solid fa-database" style="color: #ffffff;"></i>
+                            <p>my SQL</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="skill-img fa-3x fa-solid fa-c" style="color: #ffffff;"></i>
+                            <p>C/C++</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="skill-img fa-3x fa-brands fa-java" style="color: #ffffff;"></i>
+                            <p>Java</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="skill-img fa-3x fa-brands fa-git-alt" style="color: #ffffff;"></i>
+                            <p>Git</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="skill-img fa-3x fa-brands fa-github" style="color: #ffffff;"></i>
+                            <p>Github</p>
+                        </div>
+                        <div class="skill-box">
+                            <img src="./images/typescript.svg" style="width: 3rem;">
+                            <p>Typescript</p>
+                        </div>
+                        <div class="skill-box">
+                            <img src="./images/visual-studio-code.svg" style="width: 3rem;">
+                            <p>VS Code</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="skill-img fa-3x fa-brands fa-windows" style="color: #ffffff;"></i>
+                            <p>Windows</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="skill-img fa-3x fa-brands fa-figma" style="color: #ffffff;"></i>
+                            <p>Figma</p>
+                        </div>
                     </div>
-                    <div class="skill-box">
-                        <i class="skill-img fa-3x fa-brands fa-css3-alt" style="color: #ffffff;"></i>
-                        <p>CSS</p>
-                    </div>
-                    <div class="skill-box">
-                        <i class="skill-img fa-3x fa-brands fa-bootstrap" style="color: #ffffff;"></i>
-                        <p>Bootstrap</p>
-                    </div>
-                    <div class="skill-box">
-                        <i class="skill-img fa-3x fa-brands fa-square-js" style="color: #ffffff;"></i>
-                        <p>JavaScript</p>
-                    </div>
-                    <div class="skill-box">
-                        <i class="skill-img fa-3x fa-brands fa-react" style="color: #ffffff;"></i>
-                        <p>React.js</p>
-                    </div>
-                    <div class="skill-box">
-                        <i class="skill-img fa-3x fa-solid fa-database" style="color: #ffffff;"></i>
-                        <p>my SQL</p>
-                    </div>
-                    <div class="skill-box">
-                        <i class="skill-img fa-3x fa-solid fa-c" style="color: #ffffff;"></i>
-                        <p>C/C++</p>
-                    </div>
-                    <div class="skill-box">
-                        <i class="skill-img fa-3x fa-brands fa-java" style="color: #ffffff;"></i>
-                        <p>Java</p>
-                    </div>
-                    <div class="skill-box">
-                        <i class="skill-img fa-3x fa-brands fa-git-alt" style="color: #ffffff;"></i>
-                        <p>Git</p>
-                    </div>
-                    <div class="skill-box">
-                        <i class="skill-img fa-3x fa-brands fa-github" style="color: #ffffff;"></i>
-                        <p>Github</p>
-                    </div>
-                    <div class="skill-box">
-                        <img src="./images/typescript.svg" style="width: 3rem;">
-                        <p>Typescript</p>
-                    </div>
-                    <div class="skill-box">
-                        <img src="./images/visual-studio-code.svg" style="width: 3rem;">
-                        <p>VS Code</p>
-                    </div>
-                    <div class="skill-box">
-                        <i class="skill-img fa-3x fa-brands fa-windows" style="color: #ffffff;"></i>
-                        <p>Windows</p>
-                    </div>
-                    <div class="skill-box">
-                        <i class="skill-img fa-3x fa-brands fa-figma" style="color: #ffffff;"></i>
-                        <p>Figma</p>
+                </div>
+                <div id="daysicode">
+                    <h1 class="sub-topic">Days I Code</h1>
+                    <div>
+                        <!-- Prepare a container for your calendar. -->
+                        <script
+                            src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js">
+                            </script>
+
+                        <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+                        <link rel="stylesheet" href="daysicode.css" />
+
+                        <!-- Prepare a container for your calendar. -->
+
+                        <div class="calendar">
+                            <!-- Loading stuff -->
+                            Loading the data just for you.
+                        </div>
+                        <script>
+                            new GitHubCalendar(".calendar", "Shilpajha29");
+                        </script>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 
-</div>
-
-<div id="contact" class="page">
-    <h1 class="topic">Contact</h1>
-    <div class="contact-me">
-        <div class="help">
-            <h1>Have an idea? Let's make it true!</h1>
-            <h4 class="location"><i class=" fa-solid fa-location-dot" style="color: #ffffff;"></i> &nbsp;&nbsp;New
-                Delhi, India</h2>
-                <h3 class="email"><i class=" fa-solid fa-envelope" style="color: #ffffff;"></i>
-                    &nbsp;&nbsp;shilpajmd123@gmail.com</h3>
-                <form action="mailto:shilpajmd123@gmail.com" enctype="text/plain" method="post">
-                    <button class="submit" onSubmit="submit">Send me an Email <i class="fa-solid fa-arrow-right"
-                            style="color: var(--dark);"></i></button>
-                </form>
+    <div id="contact" class="page">
+        <h1 class="topic">Contact</h1>
+        <div class="contact-me">
+            <div class="help">
+                <p>I am actively looking for Internship opportunities in Software/Web Developement. If you are looking
+                    to
+                    hire or just want to say Hi, my inbox is always open and happy to hear from you. I always get an
+                    acknowledgment for my side.</p>
+                <a class="resume" href="mailto:shilpajmd123@gmail.com" style="width: 250px;">
+                    <span class="hi">Send me an Email <i class="fa-solid fa-arrow-right"
+                            style="color: var(--light);"></i></span>
+                </a>
+            </div>
+            <img class="contact-bg" src="./images/contact-bg.png" alt="img">
         </div>
-        <img class="contact-bg" src="./images/contact-bg.png" alt="img">
+        <footer>
+            <h5>Made with 💛, by Shilpa Jha</h5>
+            <h5>© 2024</h5>
+        </footer>
+        
+        
     </div>
-    <hr>
-    <footer class="footer">
-        <h5 class="made-by-me">Made with 💛, by Shilpa Jha © 2023</h5>
-        <div class="icons">
-            <a href="mailto:shilpajmd123@gmail.com"><i class="fa-solid fa-envelope fa-2x"
-                    style="color: #4aa77c;"></i></a>
-            <a href="https://github.com/Shilpajha29"><i class="fa-brands fa-github fa-2x"
-                    style="color: #4aa77c;"></i></a>
-            <a href="https://www.linkedin.com/in/shilpajha29/"><i class="fa-brands fa-linkedin fa-2x"
-                    style="color: #4aa77c;"></i></a>
-            <a href="https://leetcode.com/Shilpajha29/"><img src="./images/leetcode.svg" style="width: 1.5rem;"></a>
-        </div>
-    </footer>
-</div>
 
 </body>
 

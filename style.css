@@ -56,11 +56,52 @@ button{
 }
 
 /* *************************************************************************************************************** */
+.left-sidebar{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    bottom:0px;
+}
+.verticle-line{
+    height:120px;
+    width: 2px;
+    background-color: var(--shade);
+}
+.left-sidebar a{
+    padding: 10px 50px;
+    transform: scale(1.5);
+}
+.left-sidebar a:hover{
+    transform: scale(2);
+    transition: all 0.25s ease-in-out;
+}
+.right-sidebar{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    bottom:0px;
+    right: 0px;
+}
+.right-sidebar a{
+    writing-mode: vertical-rl; 
+    padding: 15px 30px;
+    color: var(--shade);
+    text-decoration: none;
+}
+.right-sidebar a:hover{
+    transform: scale(1.1) ;
+    transition: all 0.25s ease-in-out;
+}
+/* *************************************************************************************************************** */
 #home {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 8% ;
+    padding-left: 10% ;
     height: 100vh;
     width: 100vw;
 }
@@ -72,7 +113,9 @@ button{
 .intro h1{
     font-size: 70px;
     font-family: 'Rubik', sans-serif;
-    margin-bottom: 20px;
+    /* position: relative; */
+    /* margin-bottom: 20px; */
+    /* bottom:15px; */
 }
 .intro h1 span{
     color: var(--accent);
@@ -82,15 +125,12 @@ button{
     font-size: 20px;
     line-height: 30px;
     letter-spacing: 1.5px;
-}
-.intro p span {
-    background-color: var(--shade);
-    color: var(--accent);
-    font-weight: 600;
+    height:100px;
 }
 .gif {
     width:auto;
     height:500px;
+    z-index: 5;
 }
 .computer{
     display: none;
@@ -101,9 +141,10 @@ button{
     border-radius: 50%;
     position: absolute;
     right: -130px;
-    z-index: -1;
+    z-index: 4;
     background-color: var(--shade);
     box-shadow: 0 0 15px 3px var(--accent);
+    
 }
 .circle-sm {
     width: 120px;
@@ -119,10 +160,6 @@ button{
     animation: call 0.75s linear 0s infinite alternate;
 }
 @keyframes call {
-    /* from {    transform: scale(1.0);
-    }
-    to {    transform: scale(1.5);
-    } */
 
     from {
         
@@ -148,7 +185,7 @@ button{
 
 /* *************************************************************************************************************** */
 #projects{
-    padding: 5% 8% 0;
+    padding: 5% 10% 0;
 }
 .topic{
     font-size: 60px;
@@ -205,7 +242,6 @@ button{
     font-size: 15px;
     margin: 0px 0 50px;
     transition: all 0.25s ease-in-out;
-
 }
 
 .output .btn:hover {
@@ -220,7 +256,7 @@ button{
 
 /* *************************************************************************************************************** */
 #about{
-    padding: 5% 8% 0;
+    padding: 5% 10% 0;
 }
 .about{
     display:flex;
@@ -256,13 +292,11 @@ h5.bio {
     border-radius: 50%;
     border: var(--accent) solid 3px;
 }
-.github{
-    /* border: 1px solid #a1a1a1; */
+.resume{
     border-radius: 30px;
     text-decoration: none;
     background-color: var(--lightshade);
-    /* background-color: #0f514e; */
-    margin:30px;
+    margin:30px 0;
     padding: 15px 35px;
     display:flex;
     justify-content: center;
@@ -270,14 +304,10 @@ h5.bio {
     transition: all 0.25s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;}
 .hi{
-    /* background-color: inherit; */
-    /* width: 30px; */
     color: #dcdcdc;
     color: var(--light);
-    /* font-weight: 500; */
-    /* background-color: #c2cd4b; */
 }
-.github:hover{
+.resume:hover{
     background-color: var(--accent);
 }
 .para{
@@ -308,6 +338,20 @@ h5.bio {
     letter-spacing: 0.5px;
     line-height: 22px;
 }
+.certificates{
+    display: flex;
+    justify-content: space-between;
+}
+.experienceimg{
+    height: 360px;
+    border-radius: 2%;
+    margin: 20px 0 0 0;
+    transition: all 0.25s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.experienceimg:hover{
+    transform: scale(1.05);
+}
 /* *************************************************************************************************************** */
 .sub-topic, .sub-topic{
     font-size: 40px;
@@ -332,81 +376,49 @@ h5.bio {
     margin: 5px;
 }
 .skill-box:hover{
-    box-shadow: 0px 0px 15px -1px var(--shade) ;
+    box-shadow: 0px 0px 20px -1px #4aa77c90 ;
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
 }
 
 /* *************************************************************************************************************** */
 #contact{
-    padding: 5% 8% 0;
+    padding: 5% 10% 0;
 }
 .contact-me{
     display: flex;
     justify-content:space-between;
     align-items: center;
-    margin-bottom: 30px;
 }
 .contact-bg{
-    height:400px;
+    height:350px;
     margin-right: 50px;
 }
 .help{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 15px;
-    margin-top: 30px;
 }
-.help .email {
-    width: fit-content;
-    margin-top: 18px;
-    padding-bottom: 2px;
-    font-size: 22px;
-}
-.help .email:hover {
-    color: var(--accent);
-}
-.submit{
-    border: 2px solid var(--accent);
-    border-radius: 40px;
-    background-color: var(--light);
-    padding: 20px 25px;
-    font-weight: 600;
-    margin-top:30px; 
-    color: var(--dark);
-    font-size: 18px;
-}
-.fa-arrow-right {
-    font-size: 22px;
-    margin-left: 5px;
-}
-.submit:hover{ 
-    background-color: var(--accent);
-}
+.help p{
+    width: 600px;
+    /* font-size: 18px; */
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-weight: 400;
+    margin: 35px 0;
 
-/* ****************************************************************** */
-.footer{
-    padding: 0;
-    margin: 30px 0;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    color: var(--light);
 }
-hr{
-    box-shadow: 0 0 10px 0px var(--accent);
+/* ****************************************************************** */
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
 }
 footer h5{
-    font-size: 14px;
     color: var(--shade);
 }
-footer i{
-    padding: 6px;
-}
-.icons{
-    display: flex;
-    align-items: center;
-}
-
 /* ************************************************************************************************************************************ */
 
 @media screen and (max-width: 1000px){
